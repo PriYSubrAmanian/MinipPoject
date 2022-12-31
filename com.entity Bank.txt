@@ -1,0 +1,57 @@
+package com.entity;
+
+public class Bank {
+    private int Accountno;
+    public String Accountholdername;
+    public String Branch;
+    public String Address;
+    public int Contactnumber;
+    public Bank()
+    {
+    	
+    }
+	public Bank(int accountno, String accountholdername, String branch, String address, int contactnumber) {
+		super();
+		Accountno = accountno;
+		Accountholdername = accountholdername;
+		Branch = branch;
+		Address = address;
+		Contactnumber = contactnumber;
+	}
+	public int getAccountno() {
+		return Accountno;
+	}
+	public void setAccountno(int accountno) {
+		Accountno = accountno;
+	}
+	public String getAccountholdername() {
+		return Accountholdername;
+	}
+	public void setAccountholdername(String accountholdername) {
+		Accountholdername = accountholdername;
+	}
+	public String getBranch() {
+		return Branch;
+	}
+	public void setBranch(String branch) {
+		Branch = branch;
+	}
+	public String getAddress() {
+		return Address;
+	}
+	public void setAddress(String address) {
+		Address = address;
+	}
+	public int getContactnumber() {
+		return Contactnumber;
+	}
+	public void setContactnumber(int contactnumber) {
+		Contactnumber = contactnumber;
+	}
+	@Override
+	public String toString() {
+		return "Bank [Accountno=" + Accountno + ", Accountholdername=" + Accountholdername + ", Branch=" + Branch
+				+ ", Address=" + Address + ", Contactnumber=" + Contactnumber + "]";
+	}
+    
+}

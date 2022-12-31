@@ -1,0 +1,49 @@
+package com.view;
+
+import java.sql.SQLException;
+import java.util.Scanner;
+
+import com.service.BankService;
+
+public class BankMain {
+
+	public static void main(String[] args) throws ClassNotFoundException, SQLException {
+		// TODO Auto-generated method stub
+
+
+			
+		    System.out.println("Bank Management System");
+		    System.out.println("1.Display ALL IPL DATA");
+		    System.out.println("2.Insert ALL IPL DATA");
+		    System.out.println("3.Update ALL IPL DATA");
+		    System.out.println("4.Delete ALL IPL DATA");
+		    String s;
+		    do
+		    {
+		    Scanner sc=new Scanner(System.in);
+		   	System.out.println("Enter the choice");
+		    int choice=sc.nextInt();
+		    switch(choice)
+		    {
+		    case 1:
+		    	new BankService().displayAll();
+		    	break;
+		    case 2:
+		    	new BankService().insertData();
+		    	break;
+		    case 3:
+		    	new BankService().UpdateData();;
+		    	break;
+		    case 4:
+		    	new BankService().DeleteData();
+		    	break;
+		    }
+		    System.out.println("Do you want to continue");
+		    s=sc.next();
+			}
+		  while(s.equals("yes"));
+		}
+		
+	
+
+}

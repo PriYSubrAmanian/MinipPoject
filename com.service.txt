@@ -1,0 +1,78 @@
+package com.service;
+
+import java.sql.SQLException;
+import java.util.List;
+import java.util.Scanner;
+
+import com.dao.BankDaoImplementation;
+import com.entity.Bank;
+
+public class BankService {
+
+		public void displayAll() throws ClassNotFoundException, SQLException 
+		{
+			//IPL i=new IPL();
+			List<Bank>list=new BankDaoImplementation().displayAll();
+			for(Bank i:list)
+			{
+				System.out.println(i);
+			}
+		}
+	   public void insertData() throws ClassNotFoundException, SQLException
+	   {
+		   Scanner sc=new Scanner(System.in);
+		   System.out.println("Enter the Accountno");
+		   int accountno=sc.nextInt();
+		   System.out.println("Enter the accountholdername");
+		   String accountholdername =sc.next();
+		   System.out.println("Enter the branch");
+		   String branch=sc.next();
+		   System.out.println("Enter the address");
+		   String address=sc.next();
+		   System.out.println("Enter the contactno");
+		   int contactno=sc.nextInt();
+		   Bank i=new Bank();
+		   i.setAccountno(accountno);
+           i.setAccountholdername(accountholdername);
+           i.setBranch(branch);
+           i.setAddress(address);
+           i.setContactnumber(contactno);
+		
+       
+		   new BankDaoImplementation().insertNewAccount(i);
+	   }
+	   public void UpdateData() throws ClassNotFoundException, SQLException
+	   {
+		   Scanner sc=new Scanner(System.in);
+		   System.out.println("Enter the Accountno");
+		   int accountno=sc.nextInt();
+		   System.out.println("Enter the accountholdername");
+		   String accountholdername =sc.next();
+		   System.out.println("Enter the branch");
+		   String branch=sc.next();
+		   System.out.println("Enter the address");
+		   String address=sc.next();
+		   System.out.println("Enter the contactno");
+		   int contactno=sc.nextInt();
+		   Bank i=new Bank();
+		   i.setAccountno(accountno);
+           i.setAccountholdername(accountholdername);
+           i.setBranch(branch);
+           i.setAddress(address);
+           i.setContactnumber(contactno);
+
+       new BankDaoImplementation().UpdateNewAccount(i);
+	   }
+	   public void DeleteData() throws ClassNotFoundException, SQLException
+	   {
+		   Scanner sc=new Scanner(System.in);
+		   System.out.println("Enter the accountno");
+		   int Accountno=sc.nextInt();
+		   Bank i=new Bank();
+		   
+		   i.setAccountno(Accountno);
+		   new BankDaoImplementation().deleteByAccount(i);
+	   }
+	}
+
+

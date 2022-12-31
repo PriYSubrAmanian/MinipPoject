@@ -1,0 +1,5 @@
+create table Bank(accountno int,accountholdername varchar(25),branch varchar(25),Address varchar(50),contactno int);
+insert into Bank values(1001,'rohini','chennai','tnagar',9876543);
+insert into Bank values(1002,'priya','chennai','vandalur',897654);
+desc Bank;
+select * from Bank;

@@ -1,0 +1,14 @@
+package com.dao;
+
+import java.sql.SQLException;
+import java.util.List;
+
+import com.entity.Bank;
+
+public interface BankDao {
+	public List<Bank> displayAll() throws ClassNotFoundException, SQLException;
+	 public void insertNewAccount(Bank i)throws ClassNotFoundException,SQLException;
+	 public void UpdateNewAccount(Bank i) throws ClassNotFoundException,SQLException;
+	 public void deleteByAccount(Bank i)throws ClassNotFoundException,SQLException;
+
+}
